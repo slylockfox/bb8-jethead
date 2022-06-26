@@ -1,0 +1,13 @@
+
+[Unit]
+Description=Jupyter Notebook Service
+
+[Service]
+Type=simple
+User=jetbot
+ExecStart=/bin/sh -c "jupyter lab --ip=0.0.0.0 --no-browser"
+WorkingDirectory=/home/jetbot
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
